@@ -33,19 +33,21 @@ import android.widget.Toast;
 
 
 public class MainActivity extends Activity {
-    public ArrayList<String> items;
-    public ArrayAdapter<String> itemAdapter;
+    public ArrayList<Item> items;
+    public ArrayAdapter<Item> itemAdapter;
+    public ListView listView;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         
-        items = new ArrayList<String>();
-        itemAdapter = new ArrayAdapter<String>(this,android.R.layout.simple_list_item_checked,items);
-        ListView listView = (ListView) findViewById(R.id.mainTodosListView);
+        items = new ArrayList<Item>();
+        itemAdapter = new ArrayAdapter<Item>(this,android.R.layout.simple_list_item_checked,items);
+        listView = (ListView) findViewById(R.id.mainTodosListView);
         listView.setAdapter(itemAdapter);
         listView.setChoiceMode(ListView.CHOICE_MODE_MULTIPLE);
         //listView.setItemChecked(0, true);
+
     }
 
 
@@ -78,19 +80,24 @@ public class MainActivity extends Activity {
     	Toast.makeText(this, "Archived TODOs Manager", Toast.LENGTH_SHORT).show();
     }
     
+    
     public void addItemAction(View v) {
     	//TodoListController tlc = new TodoListController();
     	EditText textView = (EditText) findViewById(R.id.editTextTodo);
     	String newItemText = textView.getText().toString();
     	//tlc.addItem(new Item(newItemText));
-    	items.add(newItemText);
+    	Item newItem = new Item(newItemText);
+    	items.add(newItem);
     	textView.setText("");
 		itemAdapter.notifyDataSetChanged();
     	
+        //Checking what items are checked
+        for(int i=0;i<items.size();i++) {
+            if (listView.isItemChecked(i)) {
+            	Toast.makeText(this, items.get(i)+" is checked", Toast.LENGTH_SHORT).show();
+            }
+        }
     	Toast.makeText(this, newItemText+" is added", Toast.LENGTH_SHORT).show();
     }
     
-    //public void markItemDone() {
-    	//Toast.makeText(this, "Checked", Toast.LENGTH_SHORT).show();
-    //}
 }

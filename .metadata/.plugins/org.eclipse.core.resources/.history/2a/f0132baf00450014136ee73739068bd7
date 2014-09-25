@@ -1,0 +1,61 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.shevaroller.oleksiy_todos.MainActivity" >
+
+    <TextView
+        android:id="@+id/mainHeaderText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        
+        android:text="@string/todo_items_list"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <ListView
+        android:id="@+id/mainTodosListView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/addItemButton"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/mainHeaderText"
+        tools:listitem="@android:layout/simple_list_item_checked" >
+
+    </ListView>
+
+    <EditText
+        android:id="@+id/editTextTodo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/mainTodosListView"
+        android:layout_alignLeft="@+id/mainTodosListView"
+        android:layout_alignParentBottom="true"
+        android:ems="10"
+        android:inputType="text" >
+
+        <requestFocus />
+    </EditText>
+
+    <Button
+        android:id="@+id/addItemButton"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/editTextTodo"
+        android:layout_alignBottom="@+id/editTextTodo"
+        android:layout_alignEnd="@+id/mainTodosListView"
+        android:layout_alignRight="@+id/mainTodosListView"
+        android:onClick="addItemAction"
+        android:text="@string/add_item" />
+
+</RelativeLayout>
