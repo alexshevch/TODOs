@@ -19,9 +19,11 @@ along with this program. If not, see <http://www.gnu.org/licenses/>.
 package com.shevaroller.oleksiy_todos;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.Toast;
 
 
 public class MainActivity extends Activity {
@@ -50,5 +52,15 @@ public class MainActivity extends Activity {
             return true;
         }
         return super.onOptionsItemSelected(item);
+    }
+    
+    public void manageActiveTodos(MenuItem item) {
+    	Toast.makeText(this, "Active TODOs Manager", Toast.LENGTH_SHORT).show();
+    	Intent intent = new Intent(MainActivity.this, ManageActiveActivity.class);
+    	startActivity(intent);
+    }
+    
+    public void manageArchivedTodos(MenuItem item) {
+    	Toast.makeText(this, "Archived TODOs Manager", Toast.LENGTH_SHORT).show();
     }
 }

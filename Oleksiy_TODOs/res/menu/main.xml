@@ -1,11 +1,18 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     tools:context="com.shevaroller.oleksiy_todos.MainActivity" >
-
     <item
         android:id="@+id/action_settings"
         android:orderInCategory="100"
         android:showAsAction="never"
         android:title="@string/action_settings"/>
-
+    <item android:id="@+id/manageActiveMenu"
+        android:title="Manage Active TODOs"
+        android:onClick="manageActiveTodos">
+    </item>
+    <item android:id="@+id/manageArchivedMenu"
+        android:title="Manage Active TODOs"
+        android:onClick="manageArchivedTodos">
+    </item>
+    
 </menu>

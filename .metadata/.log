@@ -1,0 +1,27 @@
+!SESSION 2014-09-24 00:30:19.371 -----------------------------------------------
+eclipse.buildId=debbuild
+java.version=1.6.0_24
+java.vendor=Sun Microsystems Inc.
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=en_US
+Command-line arguments:  -os linux -ws gtk -arch x86_64
+
+!ENTRY org.eclipse.ui 2 2 2014-09-24 00:31:39.520
+!MESSAGE Invalid property category path: ValidationPropertiesPage (bundle: org.eclipse.wst.xml.ui, propertyPage: org.eclipse.wst.xml.ui.propertyPage.project.validation)
+!SESSION 2014-09-24 00:32:18.777 -----------------------------------------------
+eclipse.buildId=debbuild
+java.version=1.6.0_24
+java.vendor=Sun Microsystems Inc.
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=en_US
+Command-line arguments:  -data /home/shevaroller/workspace/TODOs -os linux -ws gtk -arch x86_64
+
+!ENTRY org.eclipse.ui 2 2 2014-09-24 00:33:10.584
+!MESSAGE Invalid property category path: ValidationPropertiesPage (bundle: org.eclipse.wst.xml.ui, propertyPage: org.eclipse.wst.xml.ui.propertyPage.project.validation)
+!SESSION 2014-09-24 00:35:05.482 -----------------------------------------------
+eclipse.buildId=debbuild
+java.version=1.6.0_24
+java.vendor=Sun Microsystems Inc.
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=en_US
+Command-line arguments:  -data /home/shevaroller/workspace/TODOs -os linux -ws gtk -arch x86_64
+
+!ENTRY org.eclipse.ui 2 2 2014-09-24 00:35:24.390
+!MESSAGE Invalid property category path: ValidationPropertiesPage (bundle: org.eclipse.wst.xml.ui, propertyPage: org.eclipse.wst.xml.ui.propertyPage.project.validation)
