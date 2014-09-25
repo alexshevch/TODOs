@@ -7,5 +7,7 @@
     <string name="todo_items_list">TODO Items List</string>
     <string name="title_activity_manage_active">ManageActiveActivity</string>
     <string name="add_item">Add item</string>
+    <string name="manage_archived_todos">Manage Archived TODOs</string>
+    <string name="manage_active_todos">Manage Active TODOs</string>
 
 </resources>

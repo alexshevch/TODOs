@@ -18,22 +18,33 @@ along with this program. If not, see <http://www.gnu.org/licenses/>.
 
 package com.shevaroller.oleksiy_todos;
 
+import java.util.ArrayList;
+
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.ArrayAdapter;
 import android.widget.EditText;
+import android.widget.ListView;
 import android.widget.Toast;
 
 
 public class MainActivity extends Activity {
-
+    public ArrayList<String> items;
+    public ArrayAdapter<String> itemAdapter;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        
+        items = new ArrayList<String>();
+        itemAdapter = new ArrayAdapter<String>(this,android.R.layout.simple_list_item_checked,items);
+        ListView listView = (ListView) findViewById(R.id.mainTodosListView);
+        listView.setAdapter(itemAdapter);
+        listView.setChoiceMode(ListView.CHOICE_MODE_MULTIPLE);   
     }
 
 
@@ -67,10 +78,14 @@ public class MainActivity extends Activity {
     }
     
     public void addItemAction(View v) {
-    	TodoListController tlc = new TodoListController();
+    	//TodoListController tlc = new TodoListController();
     	EditText textView = (EditText) findViewById(R.id.editTextTodo);
     	String newItemText = textView.getText().toString();
-    	tlc.addItem(new Item(newItemText));
+    	//tlc.addItem(new Item(newItemText));
+    	items.add(newItemText);
+    	textView.setText("");
+		itemAdapter.notifyDataSetChanged();
+    	
     	Toast.makeText(this, newItemText+" is added", Toast.LENGTH_SHORT).show();
     }
 }
