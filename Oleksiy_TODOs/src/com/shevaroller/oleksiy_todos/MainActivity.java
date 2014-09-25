@@ -23,6 +23,8 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.EditText;
 import android.widget.Toast;
 
 
@@ -62,5 +64,13 @@ public class MainActivity extends Activity {
     
     public void manageArchivedTodos(MenuItem item) {
     	Toast.makeText(this, "Archived TODOs Manager", Toast.LENGTH_SHORT).show();
+    }
+    
+    public void addItemAction(View v) {
+    	TodoListController tlc = new TodoListController();
+    	EditText textView = (EditText) findViewById(R.id.editTextTodo);
+    	String newItemText = textView.getText().toString();
+    	tlc.addItem(new Item(newItemText));
+    	Toast.makeText(this, newItemText+" is added", Toast.LENGTH_SHORT).show();
     }
 }

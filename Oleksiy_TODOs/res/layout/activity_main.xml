@@ -23,7 +23,7 @@
         android:id="@+id/mainTodosListView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_above="@+id/button1"
+        android:layout_above="@+id/addItemButton"
         android:layout_alignParentEnd="true"
         android:layout_alignParentLeft="true"
         android:layout_alignParentRight="true"
@@ -33,19 +33,11 @@
 
     </ListView>
 
-    <Button
-        android:id="@+id/button1"
-        style="?android:attr/buttonStyleSmall"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignTop="@+id/editText1"
-        android:layout_toRightOf="@+id/editText1"
-        android:text="Button" />
-
     <EditText
-        android:id="@+id/editText1"
+        android:id="@+id/editTextTodo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/mainTodosListView"
         android:layout_alignLeft="@+id/mainTodosListView"
         android:layout_alignParentBottom="true"
         android:ems="10"
@@ -53,5 +45,17 @@
 
         <requestFocus />
     </EditText>
+
+    <Button
+        android:id="@+id/addItemButton"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/editTextTodo"
+        android:layout_alignBottom="@+id/editTextTodo"
+        android:layout_alignEnd="@+id/mainTodosListView"
+        android:layout_alignRight="@+id/mainTodosListView"
+        android:onClick="addItemAction"
+        android:text="@string/add_item" />
 
 </RelativeLayout>

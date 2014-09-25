@@ -8,4 +8,8 @@ public class TodoListController {
 		}
 		return todoList;
 	}
+	
+	public void addItem(Item item) {
+		getTodoList().addItem(item);
+	}
 }
