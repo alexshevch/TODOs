@@ -3,6 +3,7 @@ package com.shevaroller.oleksiy_todos;
 public class Item {
 	
 	protected String itemText;
+	protected boolean done;
 	
 	public Item(String itemText) {
 		this.itemText = itemText;
@@ -14,5 +15,9 @@ public class Item {
 	
 	public String toString() {
 		return getText();
+	}
+	
+	public boolean isDone() {
+		return done;
 	}
 }

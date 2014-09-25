@@ -44,7 +44,8 @@ public class MainActivity extends Activity {
         itemAdapter = new ArrayAdapter<String>(this,android.R.layout.simple_list_item_checked,items);
         ListView listView = (ListView) findViewById(R.id.mainTodosListView);
         listView.setAdapter(itemAdapter);
-        listView.setChoiceMode(ListView.CHOICE_MODE_MULTIPLE);   
+        listView.setChoiceMode(ListView.CHOICE_MODE_MULTIPLE);
+        //listView.setItemChecked(0, true);
     }
 
 
@@ -88,4 +89,8 @@ public class MainActivity extends Activity {
     	
     	Toast.makeText(this, newItemText+" is added", Toast.LENGTH_SHORT).show();
     }
+    
+    //public void markItemDone() {
+    	//Toast.makeText(this, "Checked", Toast.LENGTH_SHORT).show();
+    //}
 }
