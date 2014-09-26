@@ -25,13 +25,15 @@ public final class R {
         public static final int ic_launcher=0x7f020000;
     }
     public static final class id {
-        public static final int action_settings=0x7f080004;
-        public static final int addItemButton=0x7f080002;
-        public static final int editTextTodo=0x7f080003;
-        public static final int mainHeaderText=0x7f080000;
-        public static final int mainTodosListView=0x7f080001;
-        public static final int manageActiveMenu=0x7f080005;
-        public static final int manageArchivedMenu=0x7f080006;
+        public static final int action_settings=0x7f080006;
+        public static final int activeTodosListView=0x7f080001;
+        public static final int addItemButton=0x7f080004;
+        public static final int button1=0x7f080000;
+        public static final int editTextTodo=0x7f080005;
+        public static final int mainHeaderText=0x7f080002;
+        public static final int mainTodosListView=0x7f080003;
+        public static final int manageActiveMenu=0x7f080007;
+        public static final int manageArchivedMenu=0x7f080008;
     }
     public static final class layout {
         public static final int active_todos=0x7f030000;
@@ -46,6 +48,7 @@ public final class R {
         public static final int action_settings=0x7f050002;
         public static final int add_item=0x7f050005;
         public static final int app_name=0x7f050000;
+        public static final int email_all_active_btn_text=0x7f050008;
         public static final int hello_world=0x7f050001;
         public static final int manage_active_todos=0x7f050007;
         public static final int manage_archived_todos=0x7f050006;

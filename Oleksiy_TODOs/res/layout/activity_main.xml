@@ -29,7 +29,9 @@
         android:layout_alignParentRight="true"
         android:layout_alignParentStart="true"
         android:layout_below="@+id/mainHeaderText"
+        android:choiceMode="multipleChoice"
         android:clickable="true"
+        android:textAlignment="center"
         tools:listitem="@android:layout/simple_list_item_checked" >
 
     </ListView>

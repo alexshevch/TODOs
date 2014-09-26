@@ -26,6 +26,8 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.AdapterView;
+import android.widget.AdapterView.OnItemClickListener;
 import android.widget.ArrayAdapter;
 import android.widget.EditText;
 import android.widget.ListView;
@@ -34,6 +36,7 @@ import android.widget.Toast;
 
 public class MainActivity extends Activity {
     public ArrayList<Item> items;
+    public TodoList todoList;
     public ArrayAdapter<Item> itemAdapter;
     public ListView listView;
     @Override
@@ -42,14 +45,23 @@ public class MainActivity extends Activity {
         setContentView(R.layout.activity_main);
         
         items = new ArrayList<Item>();
+        todoList = new TodoList(items);
         itemAdapter = new ArrayAdapter<Item>(this,android.R.layout.simple_list_item_checked,items);
         listView = (ListView) findViewById(R.id.mainTodosListView);
         listView.setAdapter(itemAdapter);
         listView.setChoiceMode(ListView.CHOICE_MODE_MULTIPLE);
-        //listView.setItemChecked(0, true);
+        listView.setClickable(true);
+        listView.setOnItemClickListener(myClickListener);
 
     }
+    
+    public OnItemClickListener myClickListener = new OnItemClickListener() {
 
+		@Override
+		public void onItemClick(AdapterView<?> arg0, View arg1, int arg2, long arg3) {
+        	Toast.makeText(MainActivity.this, items.get((int) arg3)+" is done", Toast.LENGTH_SHORT).show();
+		}
+    	};
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -73,6 +85,9 @@ public class MainActivity extends Activity {
     public void manageActiveTodos(MenuItem item) {
     	Toast.makeText(this, "Active TODOs Manager", Toast.LENGTH_SHORT).show();
     	Intent intent = new Intent(MainActivity.this, ManageActiveActivity.class);
+    	//Intent i = new Intent(getApplicationContext(), NewActivity.class);
+    	String itemsString = items.toString().replace("[", "").replace("]", "");
+    	intent.putExtra("items",itemsString);
     	startActivity(intent);
     }
     
@@ -94,7 +109,7 @@ public class MainActivity extends Activity {
         //Checking what items are checked
         for(int i=0;i<items.size();i++) {
             if (listView.isItemChecked(i)) {
-            	Toast.makeText(this, items.get(i)+" is checked", Toast.LENGTH_SHORT).show();
+            	//Toast.makeText(this, items.get(i)+" is checked", Toast.LENGTH_SHORT).show();
             }
         }
     	Toast.makeText(this, newItemText+" is added", Toast.LENGTH_SHORT).show();

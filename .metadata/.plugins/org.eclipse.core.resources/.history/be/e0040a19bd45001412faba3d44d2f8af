@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Oleksiy_TODOs</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="todo_items_list">TODO Items List</string>
+    <string name="title_activity_manage_active">ManageActiveActivity</string>
+    <string name="add_item">Add item</string>
+    <string name="manage_archived_todos">Manage Archived TODOs</string>
+    <string name="manage_active_todos">Manage Active TODOs</string>
+
+</resources>

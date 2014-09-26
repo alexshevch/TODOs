@@ -7,10 +7,10 @@ public class TodoList {
 
 	protected ArrayList<Item> todoList;
 	
-	public TodoList() {
-		todoList = new ArrayList<Item>();
+	public TodoList(ArrayList<Item> items) {
+		todoList = items;
 	}
-	
+
 	public Collection<Item> getTodoList() {
 		return todoList;
 	}

@@ -1,16 +1,35 @@
 package com.shevaroller.oleksiy_todos;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+
 import android.app.Activity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.ArrayAdapter;
+import android.widget.ListView;
 
 public class ManageActiveActivity extends Activity {
+    public ArrayList<String> items;
+    public ArrayAdapter<String> itemAdapter;
+    public ListView listView;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.active_todos);
+		Bundle extras = getIntent().getExtras();
+		if (extras != null) {
+		    items = new ArrayList<String>(Arrays.asList(extras.getString("items").split(",")));
+		}
+		
+	    itemAdapter = new ArrayAdapter<String>(this,android.R.layout.simple_list_item_checked,items);
+        listView = (ListView) findViewById(R.id.activeTodosListView);
+        listView.setAdapter(itemAdapter);
+
+        listView.setChoiceMode(ListView.CHOICE_MODE_MULTIPLE);
+        //Toast.makeText(this, itemsArr.get(0)+"\n Item2:"+itemsArr.get(1), Toast.LENGTH_LONG).show();
 	}
 
 	@Override

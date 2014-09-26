@@ -9,5 +9,6 @@
     <string name="add_item">Add item</string>
     <string name="manage_archived_todos">Manage Archived TODOs</string>
     <string name="manage_active_todos">Manage Active TODOs</string>
+    <string name="email_all_active_btn_text">Email all Active TODOs</string>
 
 </resources>
