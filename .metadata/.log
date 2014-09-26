@@ -283,3 +283,13 @@ Command-line arguments:  -os linux -ws gtk -arch x86_64 -product org.eclipse.epp
 
 !ENTRY org.eclipse.core.resources 2 10035 2014-09-25 15:57:01.216
 !MESSAGE The workspace exited with unsaved changes in the previous session; refreshing workspace to recover changes.
+!SESSION 2014-09-26 15:22:50.195 -----------------------------------------------
+eclipse.buildId=M20120208-0800
+java.version=1.6.0_32
+java.vendor=Sun Microsystems Inc.
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.java.product
+Command-line arguments:  -os linux -ws gtk -arch x86_64 -product org.eclipse.epp.package.java.product
+
+!ENTRY org.eclipse.core.resources 2 10035 2014-09-26 15:22:56.320
+!MESSAGE The workspace exited with unsaved changes in the previous session; refreshing workspace to recover changes.

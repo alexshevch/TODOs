@@ -22,6 +22,7 @@ import java.util.ArrayList;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -56,10 +57,13 @@ public class MainActivity extends Activity {
     }
     
     public OnItemClickListener myClickListener = new OnItemClickListener() {
-
+    	//public View item;
 		@Override
 		public void onItemClick(AdapterView<?> arg0, View arg1, int arg2, long arg3) {
         	Toast.makeText(MainActivity.this, items.get((int) arg3)+" is done", Toast.LENGTH_SHORT).show();
+        	
+        	//item = listView.getChildAt((int) arg3);
+        	//item.setBackgroundColor(Color.BLUE);
 		}
     	};
 
@@ -85,7 +89,8 @@ public class MainActivity extends Activity {
     public void manageActiveTodos(MenuItem item) {
     	Toast.makeText(this, "Active TODOs Manager", Toast.LENGTH_SHORT).show();
     	Intent intent = new Intent(MainActivity.this, ManageActiveActivity.class);
-    	//Intent i = new Intent(getApplicationContext(), NewActivity.class);
+
+        //Toast.makeText(this, checkedItems, Toast.LENGTH_LONG).show();
     	String itemsString = items.toString().replace("[", "").replace("]", "");
     	intent.putExtra("items",itemsString);
     	startActivity(intent);
@@ -106,12 +111,6 @@ public class MainActivity extends Activity {
     	textView.setText("");
 		itemAdapter.notifyDataSetChanged();
     	
-        //Checking what items are checked
-        for(int i=0;i<items.size();i++) {
-            if (listView.isItemChecked(i)) {
-            	//Toast.makeText(this, items.get(i)+" is checked", Toast.LENGTH_SHORT).show();
-            }
-        }
     	Toast.makeText(this, newItemText+" is added", Toast.LENGTH_SHORT).show();
     }
     
