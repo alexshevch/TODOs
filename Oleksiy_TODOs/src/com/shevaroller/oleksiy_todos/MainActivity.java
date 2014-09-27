@@ -105,7 +105,9 @@ public class MainActivity extends Activity {
     public void summaryClick(MenuItem item) {
     	Intent intent = new Intent(MainActivity.this, SummaryActivity.class);
     	int checkedTodos = listView.getCheckedItemCount();
+    	int uncheckedTodos = listView.getChildCount() - checkedTodos;
     	intent.putExtra("CHECKED_TODOS",checkedTodos);
+    	intent.putExtra("UNCHECKED_TODOS",uncheckedTodos);
     	startActivity(intent);
     	
     }

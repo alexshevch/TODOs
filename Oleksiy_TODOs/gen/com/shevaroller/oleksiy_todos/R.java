@@ -40,9 +40,9 @@ public final class R {
         public static final int removeItem=0x7f08000d;
         public static final int summary=0x7f080011;
         public static final int todos_checked_text=0x7f080006;
-        public static final int todos_checked_value=0x7f080008;
-        public static final int todos_unchecked_text=0x7f080009;
-        public static final int todos_unchecked_value=0x7f080007;
+        public static final int todos_checked_value=0x7f080007;
+        public static final int todos_unchecked_text=0x7f080008;
+        public static final int todos_unchecked_value=0x7f080009;
     }
     public static final class layout {
         public static final int active_todos=0x7f030000;

@@ -12,37 +12,48 @@
         android:id="@+id/todos_checked_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
         android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
         android:layout_alignParentTop="true"
-        android:layout_marginTop="14dp"
+        android:layout_marginTop="15dp"
         android:text="@string/todos_checked" />
 
     <TextView
         android:id="@+id/todos_checked_value"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
         android:layout_below="@+id/todos_checked_text"
-        android:textSize="26sp" />
+        android:layout_marginTop="22dp"
+        android:text="" />
 
     <TextView
         android:id="@+id/todos_unchecked_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/todos_checked_value"
-        android:layout_alignStart="@+id/todos_checked_value"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
         android:layout_below="@+id/todos_checked_value"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="27dp"
         android:text="@string/todos_unchecked" />
 
     <TextView
         android:id="@+id/todos_unchecked_value"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/todos_unchecked_text"
-        android:layout_alignStart="@+id/todos_unchecked_text"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
         android:layout_below="@+id/todos_unchecked_text"
-        android:layout_marginTop="22dp"
-        android:textSize="26sp" />
-
+        android:layout_marginTop="28dp"
+        android:text="" />
+        
 </RelativeLayout>

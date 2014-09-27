@@ -12,7 +12,7 @@ public class SummaryActivity extends Activity {
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		int checkedTodos = 0;
-		//int uncheckedTodos = 0;
+		int uncheckedTodos = 0;
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_summary);
     	Toast.makeText(this, "TODOs Summary", Toast.LENGTH_SHORT).show();
@@ -20,9 +20,13 @@ public class SummaryActivity extends Activity {
 		Bundle extras = getIntent().getExtras();
 		if (extras != null) {
 			checkedTodos = extras.getInt("CHECKED_TODOS");
+			uncheckedTodos = extras.getInt("UNCHECKED_TODOS");
 		}
-		TextView textView = (TextView)findViewById(R.id.todos_checked_value);
-		textView.setText(String.valueOf(checkedTodos));
+		TextView textViewforChecked = (TextView)findViewById(R.id.todos_checked_value);
+		textViewforChecked.setText(String.valueOf(checkedTodos));
+		
+		TextView textViewforUnchecked = (TextView)findViewById(R.id.todos_unchecked_value);
+		textViewforUnchecked.setText(String.valueOf(uncheckedTodos));
 	}
 
 	@Override
