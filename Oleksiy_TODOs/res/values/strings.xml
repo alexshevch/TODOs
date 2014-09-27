@@ -10,5 +10,10 @@
     <string name="manage_archived_todos">Manage Archived TODOs</string>
     <string name="manage_active_todos">Manage Active TODOs</string>
     <string name="email_all_active_btn_text">Email all Active TODOs</string>
+    <string name="title_activity_manage_archived">ManageArchivedActivity</string>
+    <string name="email_all_archived_todos">Email All Archived TODOs</string>
+    <string name="archive_item_popup">Archive Item</string>
+    <string name="email_item_popup">Email Item</string>
+    <string name="remove_item_popup">Remove Item</string>
 
 </resources>

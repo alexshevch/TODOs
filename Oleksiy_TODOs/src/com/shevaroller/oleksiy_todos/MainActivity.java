@@ -22,7 +22,6 @@ import java.util.ArrayList;
 
 import android.app.Activity;
 import android.content.Intent;
-import android.graphics.Color;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -57,12 +56,11 @@ public class MainActivity extends Activity {
     }
     
     public OnItemClickListener myClickListener = new OnItemClickListener() {
-    	//public View item;
 		@Override
-		public void onItemClick(AdapterView<?> arg0, View arg1, int arg2, long arg3) {
-        	Toast.makeText(MainActivity.this, items.get((int) arg3)+" is done", Toast.LENGTH_SHORT).show();
+		public void onItemClick(AdapterView<?> arg0, View view, int position, long id) {
+        	Toast.makeText(MainActivity.this, items.get((int) id)+" is done", Toast.LENGTH_SHORT).show();
         	
-        	//item = listView.getChildAt((int) arg3);
+        	//item = listView.getChildAt((int) id);
         	//item.setBackgroundColor(Color.BLUE);
 		}
     	};
@@ -87,17 +85,16 @@ public class MainActivity extends Activity {
     }
     
     public void manageActiveTodos(MenuItem item) {
-    	Toast.makeText(this, "Active TODOs Manager", Toast.LENGTH_SHORT).show();
     	Intent intent = new Intent(MainActivity.this, ManageActiveActivity.class);
-
-        //Toast.makeText(this, checkedItems, Toast.LENGTH_LONG).show();
     	String itemsString = items.toString().replace("[", "").replace("]", "");
     	intent.putExtra("items",itemsString);
     	startActivity(intent);
     }
     
     public void manageArchivedTodos(MenuItem item) {
-    	Toast.makeText(this, "Archived TODOs Manager", Toast.LENGTH_SHORT).show();
+    	Intent intent = new Intent(MainActivity.this, ManageArchivedActivity.class);
+    	startActivity(intent);
+
     }
     
     

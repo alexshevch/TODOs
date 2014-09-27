@@ -10,10 +10,10 @@
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:text="@string/email_all_active_btn_text" />
+        android:text="@string/email_all_archived_todos" />
 
     <ListView
-        android:id="@+id/activeTodosListView"
+        android:id="@+id/archivedTodosListView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_above="@+id/bulkArchivedButton"

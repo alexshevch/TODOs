@@ -26,6 +26,10 @@
             android:name=".ManageActiveActivity"
             android:label="@string/title_activity_manage_active" >
         </activity>
+        <activity
+            android:name=".ManageArchivedActivity"
+            android:label="@string/title_activity_manage_archived" >
+        </activity>
     </application>
 
 </manifest>

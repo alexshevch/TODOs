@@ -3,14 +3,14 @@
     tools:context="com.shevaroller.oleksiy_todos.ManageActiveActivity" >
     <item  
         android:id="@+id/deactivateItem"  
-        android:title="Deactivate Item"/>  
+        android:title="@string/archive_item_popup"/>  
 
     <item  
         android:id="@+id/emailItem"  
-        android:title="Email Item"/>  
+        android:title="@string/email_item_popup"/>  
 
     <item  
         android:id="@+id/removeItem"  
-        android:title="Remove Item"/>  
+        android:title="@string/remove_item_popup"/>  
 
 </menu> 

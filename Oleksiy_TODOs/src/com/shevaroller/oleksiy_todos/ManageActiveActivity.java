@@ -24,6 +24,7 @@ public class ManageActiveActivity extends Activity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.active_todos);
+    	Toast.makeText(this, "Active TODOs Manager", Toast.LENGTH_SHORT).show();
 		Bundle extras = getIntent().getExtras();
 		if (extras != null) {
 		    items = new ArrayList<String>(Arrays.asList(extras.getString("items").split(",")));
@@ -44,9 +45,7 @@ public class ManageActiveActivity extends Activity {
 	public OnItemLongClickListener longClickListener = new OnItemLongClickListener() {
 
 		@Override
-		public boolean onItemLongClick(AdapterView<?> parent, View view, int position, long id) {
-			Toast.makeText(ManageActiveActivity.this, "Long Clicked", Toast.LENGTH_SHORT).show();
-			
+		public boolean onItemLongClick(AdapterView<?> parent, View view, int position, long id) {			
 			PopupMenu popup = new PopupMenu(ManageActiveActivity.this, view);   
             popup.getMenuInflater().inflate(R.menu.active_popup_menu, popup.getMenu());
             popup.show();
