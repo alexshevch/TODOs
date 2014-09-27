@@ -58,8 +58,14 @@ public class MainActivity extends Activity {
     public OnItemClickListener myClickListener = new OnItemClickListener() {
 		@Override
 		public void onItemClick(AdapterView<?> arg0, View view, int position, long id) {
-        	Toast.makeText(MainActivity.this, items.get((int) id)+" is done", Toast.LENGTH_SHORT).show();
-        	
+			if(view.isActivated()) {
+				view.setActivated(false);
+				Toast.makeText(MainActivity.this, items.get((int) id)+" is unchecked", Toast.LENGTH_SHORT).show();
+			}
+			else {
+				view.setActivated(true);
+				Toast.makeText(MainActivity.this, items.get((int) id)+" is checked", Toast.LENGTH_SHORT).show();	
+			}
         	//item = listView.getChildAt((int) id);
         	//item.setBackgroundColor(Color.BLUE);
 		}
