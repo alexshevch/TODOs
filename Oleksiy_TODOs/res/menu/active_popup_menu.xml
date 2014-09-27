@@ -1,0 +1,16 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.shevaroller.oleksiy_todos.ManageActiveActivity" >
+    <item  
+        android:id="@+id/deactivateItem"  
+        android:title="Deactivate Item"/>  
+
+    <item  
+        android:id="@+id/emailItem"  
+        android:title="Email Item"/>  
+
+    <item  
+        android:id="@+id/removeItem"  
+        android:title="Remove Item"/>  
+
+</menu> 

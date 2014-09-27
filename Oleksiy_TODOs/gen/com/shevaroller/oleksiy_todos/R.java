@@ -25,15 +25,18 @@ public final class R {
         public static final int ic_launcher=0x7f020000;
     }
     public static final class id {
-        public static final int action_settings=0x7f080006;
+        public static final int action_settings=0x7f080009;
         public static final int activeTodosListView=0x7f080001;
         public static final int addItemButton=0x7f080004;
         public static final int button1=0x7f080000;
+        public static final int deactivateItem=0x7f080006;
         public static final int editTextTodo=0x7f080005;
+        public static final int emailItem=0x7f080007;
         public static final int mainHeaderText=0x7f080002;
         public static final int mainTodosListView=0x7f080003;
-        public static final int manageActiveMenu=0x7f080007;
-        public static final int manageArchivedMenu=0x7f080008;
+        public static final int manageActiveMenu=0x7f08000a;
+        public static final int manageArchivedMenu=0x7f08000b;
+        public static final int removeItem=0x7f080008;
     }
     public static final class layout {
         public static final int active_todos=0x7f030000;
@@ -41,8 +44,9 @@ public final class R {
         public static final int activity_manage_active=0x7f030002;
     }
     public static final class menu {
-        public static final int main=0x7f070000;
-        public static final int manage_active=0x7f070001;
+        public static final int active_popup_menu=0x7f070000;
+        public static final int main=0x7f070001;
+        public static final int manage_active=0x7f070002;
     }
     public static final class string {
         public static final int action_settings=0x7f050002;

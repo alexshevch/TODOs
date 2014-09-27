@@ -7,8 +7,13 @@ import android.app.Activity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.AdapterView.OnItemLongClickListener;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
+import android.widget.PopupMenu;
+import android.widget.Toast;
 
 public class ManageActiveActivity extends Activity {
     public ArrayList<String> items;
@@ -30,8 +35,26 @@ public class ManageActiveActivity extends Activity {
 
         listView.setChoiceMode(ListView.CHOICE_MODE_MULTIPLE);
         //Toast.makeText(this, itemsArr.get(0)+"\n Item2:"+itemsArr.get(1), Toast.LENGTH_LONG).show();
+        
+        listView.isLongClickable();
+        listView.setOnItemLongClickListener(longClickListener);
+        
 	}
+		
+	public OnItemLongClickListener longClickListener = new OnItemLongClickListener() {
 
+		@Override
+		public boolean onItemLongClick(AdapterView<?> parent, View view, int position, long id) {
+			Toast.makeText(ManageActiveActivity.this, "Long Clicked", Toast.LENGTH_SHORT).show();
+			
+			PopupMenu popup = new PopupMenu(ManageActiveActivity.this, view);   
+            popup.getMenuInflater().inflate(R.menu.active_popup_menu, popup.getMenu());
+            popup.show();
+			return false;
+			
+		}
+	};
+	
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
 		// Inflate the menu; this adds items to the action bar if it is present.
