@@ -5,7 +5,8 @@
         android:id="@+id/action_settings"
         android:orderInCategory="100"
         android:showAsAction="never"
-        android:title="@string/action_settings"/>
+        android:title="@string/action_settings">
+    </item>
     <item android:id="@+id/manageActiveMenu"
         android:title="@string/manage_active_todos"
         android:onClick="manageActiveTodos">
@@ -14,5 +15,6 @@
         android:title="@string/manage_archived_todos"
         android:onClick="manageArchivedTodos">
     </item>
+    <item android:id="@+id/summary" android:title="@string/summary" android:onClick="summaryClick"></item>
     
 </menu>

@@ -30,6 +30,10 @@
             android:name=".ManageArchivedActivity"
             android:label="@string/title_activity_manage_archived" >
         </activity>
+        <activity
+            android:name=".SummaryActivity"
+            android:label="@string/title_activity_summary" >
+        </activity>
     </application>
 
 </manifest>

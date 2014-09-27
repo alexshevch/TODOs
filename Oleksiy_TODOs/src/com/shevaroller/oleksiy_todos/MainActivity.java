@@ -94,7 +94,14 @@ public class MainActivity extends Activity {
     public void manageArchivedTodos(MenuItem item) {
     	Intent intent = new Intent(MainActivity.this, ManageArchivedActivity.class);
     	startActivity(intent);
-
+    }
+    
+    public void summaryClick(MenuItem item) {
+    	Intent intent = new Intent(MainActivity.this, SummaryActivity.class);
+    	int checkedTodos = listView.getCheckedItemCount();
+    	intent.putExtra("CHECKED_TODOS",checkedTodos);
+    	startActivity(intent);
+    	
     }
     
     

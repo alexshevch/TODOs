@@ -15,5 +15,9 @@
     <string name="archive_item_popup">Archive Item</string>
     <string name="email_item_popup">Email Item</string>
     <string name="remove_item_popup">Remove Item</string>
+    <string name="summary">Summary</string>
+    <string name="title_activity_summary">SummaryActivity</string>
+    <string name="todos_checked">Total number of TODO items checked:</string>
+    <string name="todos_unchecked">Total number of TODO items unchecked:</string>
 
 </resources>
